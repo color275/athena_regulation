@@ -8,7 +8,7 @@
 - Cron expression : cron(0 * * * ? *)
 
 
-## Lambda Code
+## Lambda
 - Call the query executed in Athena and the event in Cloudtrail, concatenate them by query_execution_id, and store them in S3
 - Path : src/lambda_code.py
 - python3.10
