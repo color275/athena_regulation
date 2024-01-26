@@ -97,7 +97,7 @@ def lambda_handler(event, context):
     s3_client = boto3.client('s3', region_name=region_name)
     cloudtrail_client = boto3.client('cloudtrail', region_name=region_name)
 
-    utc_start_time = get_utc_time(70)  # n분 전 UTC 시간
+    utc_start_time = get_utc_time(70) 
     utc_end_time = datetime.utcnow()
 
     query_execution_ids = save_cloudtrail_events(cloudtrail_client, s3_client, s3_bucket, event_source, utc_start_time, utc_end_time)
