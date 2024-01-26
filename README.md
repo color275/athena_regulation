@@ -65,3 +65,9 @@ where a.query_execution_id = b.query_execution_id;
 
 ## QuickSight
 ...
+
+
+## ToDO
+- S3 에 저장 할 때 파타션
+- 데이터 타입 정리 (날짜 컬럼 string -> timestamp)
+- quicksight
