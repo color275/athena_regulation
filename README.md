@@ -17,6 +17,7 @@
     region_name = 'ap-northeast-2'
     s3_bucket = 'chiholee-athena-regulation'
     ```
+- policy : ...
 
 ## Glue
 - Using Glue Cralwer to create a table that can be used by athena
