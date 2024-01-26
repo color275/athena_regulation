@@ -68,6 +68,8 @@ where a.query_execution_id = b.query_execution_id;
 
 
 ## ToDO
-- S3 에 저장 할 때 파타션
+- merge 된 데이터도 s3에 저장?
+- S3 에 저장 할 때 파티션
 - 데이터 타입 정리 (날짜 컬럼 string -> timestamp)
 - quicksight
+- 테이블 Description 정리
