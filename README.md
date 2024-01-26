@@ -18,11 +18,14 @@
     s3_bucket = 'chiholee-athena-regulation'
     ```
 
-## Glue Cralwer
+## Glue
+- Using Glue Cralwer to create a table that can be used by athena
+- output table : athena_cloudtrail_info, athena_sql_info
 - Data Soure : s3://chiholee-athena-regulation/ (Need to rename bucket)
 
 ## Table
 ### athena_cloudtrail_info
+Event details data in Cloudtrail
 | Column Name | Type | PK | Description |
 | -------- | -------- | -------- | -------- |
 | event_id | string | V | ... |
@@ -40,6 +43,7 @@
 
 
 ### athena_sql_info
+Queries performed on athena
 | Column Name | Type | PK  | Description |
 | ----------- | ---- | --- | ----------- |
 | query_execution_id | string | V | ...|
