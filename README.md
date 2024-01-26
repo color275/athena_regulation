@@ -1,8 +1,19 @@
 # athena_regulation
 
-![](2024-01-26-10-19-23.png)
+## Architecture
+![](img/2024-01-26-10-19-23.png)
 
-### Table : athena_cloudtrail_info
+## Lambda Code
+src/lambda_code.py
+- python3.10
+- Change any of the following as needed (s3_bucket name must be changed)
+    ```
+    region_name = 'ap-northeast-2'
+    s3_bucket = 'chiholee-athena-regulation'
+    ```
+
+## Table
+### athena_cloudtrail_info
 | Column Name | Type | PK | Description |
 | -------- | -------- | -------- | -------- |
 | event_id | string | V | ... |
@@ -19,7 +30,7 @@
 | source_ip_address | string |  | ... |
 
 
-### Table : athena_sql_info
+### athena_sql_info
 | Column Name | Type | PK  | Description |
 | ----------- | ---- | --- | ----------- |
 | query_execution_id | string | V | ...|
@@ -35,10 +46,13 @@
 | query | string | | ...|
 
 
-### Athena Audit Query
+## Athena Audit Query
 ```sql
 select *
 from athena_cloudtrail_info a,
      athena_sql_info b
 where a.query_execution_id = b.query_execution_id;
-``````
+```
+
+## QuickSight
+...
